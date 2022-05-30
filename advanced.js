@@ -72,7 +72,21 @@ console.log(northernIrelandKeys);
  */
 
 scotPop = unitedKingdom[0].population;
+let smallerThanScotland = 0;
+let biggerThanScotland = 0;
 
 for (country of unitedKingdom) {
-    
+    if (scotPop > country.population) {
+        smallerThanScotland++;
+    } else if (scotPop < country.population) {
+        biggerThanScotland++;
+    }
+}
+
+if (smallerThanScotland == 0) {
+    console.log("Scotland is the smallest");
+} else if (biggerThanScotland == 0) {
+    console.log("Scotland is biggest");
+} else {
+    console.log("Scotland is somewhere in the middle in terms of population");
 }
